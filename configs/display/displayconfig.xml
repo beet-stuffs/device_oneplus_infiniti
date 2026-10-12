@@ -271,4 +271,6 @@
         <timeMinSecs>60</timeMinSecs>          // Minimum time remaining required to switch
         </timing>                              //   HBM on for.
     </highBrightnessMode>
+    <ambientLightHorizonLong>2000</ambientLightHorizonLong>
+    <ambientLightHorizonShort>500</ambientLightHorizonShort>
 </displayConfiguration>
