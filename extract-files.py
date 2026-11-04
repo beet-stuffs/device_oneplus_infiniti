@@ -40,6 +40,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'odm/etc/camera/config/camera_unit_feature_config.protobuf': blob_fixup()
+        .patch_file('blob-patches/camera_unit_feature_config.py'),
     'odm/etc/init/init.camera_process.rc': blob_fixup()
         .regex_replace('    delete_recursion', '    #delete_recursion'),
     (
