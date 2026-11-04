@@ -77,6 +77,7 @@ blob_fixups: blob_fixups_user_type = {
         'odm/lib64/camera.oemlayer.healthmonitor.so',
         'odm/lib64/camera.oemlayer.logger.so',
         'odm/lib64/camera.oemlayer.uilayer.so',
+        'odm/lib64/hw/camera.oemlayer.v2.so',
     ): blob_fixup()
         .replace_needed('vendor.oplus.hardware.charger-V8-ndk.so', 'vendor.oplus.hardware.charger-V9-ndk.so'),
     'odm/vendor/etc/wifi/WCNSS_qcom_cfg.ini': blob_fixup()
