@@ -270,16 +270,16 @@
         <timeMaxSecs>300</timeMaxSecs>         // Maximum time of HBM allowed in that window.
         <timeMinSecs>60</timeMinSecs>          // Minimum time remaining required to switch
         </timing>                              //   HBM on for.
-        <!-- Lets HDR content, like the gain maps of camera photos, go up to 4x
-             the SDR brightness, which is the headroom the camera saves. -->
+        <!-- How far HDR content may go above SDR white at a given SDR brightness. Same
+             calibration as the stock firmware. -->
         <sdrHdrRatioMap>
             <point>
                 <sdrNits>2.000</sdrNits>
-                <hdrRatio>4.000</hdrRatio>
+                <hdrRatio>8.000</hdrRatio>
             </point>
             <point>
-                <sdrNits>800.000</sdrNits>
-                <hdrRatio>4.000</hdrRatio>
+                <sdrNits>500.000</sdrNits>
+                <hdrRatio>1.5</hdrRatio>
             </point>
         </sdrHdrRatioMap>
     </highBrightnessMode>
