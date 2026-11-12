@@ -270,6 +270,18 @@
         <timeMaxSecs>300</timeMaxSecs>         // Maximum time of HBM allowed in that window.
         <timeMinSecs>60</timeMinSecs>          // Minimum time remaining required to switch
         </timing>                              //   HBM on for.
+        <!-- Lets HDR content, like the gain maps of camera photos, go up to 4x
+             the SDR brightness, which is the headroom the camera saves. -->
+        <sdrHdrRatioMap>
+            <point>
+                <sdrNits>2.000</sdrNits>
+                <hdrRatio>4.000</hdrRatio>
+            </point>
+            <point>
+                <sdrNits>800.000</sdrNits>
+                <hdrRatio>4.000</hdrRatio>
+            </point>
+        </sdrHdrRatioMap>
     </highBrightnessMode>
     <ambientLightHorizonLong>2000</ambientLightHorizonLong>
     <ambientLightHorizonShort>500</ambientLightHorizonShort>
