@@ -42,6 +42,11 @@ lib_fixups: lib_fixups_user_type = {
 blob_fixups: blob_fixups_user_type = {
     'odm/etc/camera/config/camera_unit_feature_config.protobuf': blob_fixup()
         .patch_file('blob-patches/camera_unit_feature_config.py'),
+    (
+        'odm/etc/display/qdcm_calib_data_AA601_P_7_A0020_dsc_cmd_mode_panel.json',
+        'odm/etc/display/qdcm_calib_data_AD296_P_3_A0020_dsc_cmd_mode_panel.json',
+    ): blob_fixup()
+        .patch_file('blob-patches/qdcm_calib_data.py'),
     'odm/etc/init/init.camera_process.rc': blob_fixup()
         .regex_replace('    delete_recursion', '    #delete_recursion'),
     (
