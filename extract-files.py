@@ -89,7 +89,9 @@ module = ExtractUtilsModule(
     add_firmware_proprietary_file=True,
 )
 
-add_generated_thermal_engine_config(module)
+add_generated_thermal_engine_config(
+    module, min_temp=0, cpu_limit='boostCeiling'
+)
 
 if __name__ == '__main__':
     utils = ExtractUtils.device_with_common(
