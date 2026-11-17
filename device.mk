@@ -79,12 +79,10 @@ $(call soong_config_set,OPLUS_LINEAGE_TOUCH_HAL,HTPR_ENABLE_VALUE,14)
 
 # Vibrator
 PRODUCT_PACKAGES += \
-    vendor.qti.hardware.vibrator.service.oplus
+    vendor.qti.hardware.vibrator.service
 
-$(call soong_config_set_bool,OPLUS_LINEAGE_VIBRATOR_HAL,USE_EFFECT_STREAM,true)
-$(call soong_config_set_bool,OPLUS_LINEAGE_VIBRATOR_HAL,MAGNITUDE_FLOOR,true)
-$(call soong_config_set_bool,OPLUS_LINEAGE_VIBRATOR_HAL,SUPPORT_TEXTURE_TICK,true)
-$(call soong_config_set,OPLUS_LINEAGE_VIBRATOR_HAL,INCLUDE_DIR,device/oneplus/infiniti/vibrator/effect)
+$(call soong_config_set_bool,qti_vibrator,use_effect_stream,true)
+$(call soong_config_set,qti_vibrator,effect_lib,libqtivibratoreffect.oplus.infiniti)
 
 # Inherit from the common OEM chipset makefile.
 $(call inherit-product, device/oneplus/sm8850-common/common.mk)
